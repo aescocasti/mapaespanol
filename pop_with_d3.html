@@ -15,7 +15,7 @@
         #basemaps-wrapper {
             position: absolute;
             top: 620px;
-            left: 820px;
+            left: 780px;
             width: 170;
             background: white;
             padding: 10px;
@@ -49,14 +49,16 @@
 
         #legend {
             position: absolute;
-            max-width: 230px;
-            height: 180;
-            padding: 6px 8px;
+            max-width: 220px;
+            height: 185;
+            padding: 5px 8px 1px ;
             font: 12px Arial, Helvetica, sans-serif;
-            background: white;
             background: rgba(255, 255, 255, 1);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 7px 7px 5px -5px #888;   
             border-radius: 5px;
+            margin-top: 6px;
+            margin-left: 5px;
+            
         }
 
         text {
@@ -82,6 +84,7 @@
 </style>
 
 <body>
+    
 
     <div id="tooltip"></div>
 
@@ -153,8 +156,7 @@
             </g>
             <g>
                 <rect x="0" y="140" width="20" height="20" fill="#f1eef6"></rect>
-                <text x="30" y="155" fill="black">
-                    < 0.001 </text>
+                <text x="30" y="155" fill="black"> < 0.001 </text>
             </g>
             <g>
                 <rect x="0" y="160" width="20" height="20" fill="#969696"></rect>
@@ -170,7 +172,7 @@
 <script>
 
 // Set global
-    const width = 1000;
+    const width = 960;
     const height = 600;
     var country = 'Total',
         currYear = 2020
@@ -183,9 +185,11 @@
         .attr("width", width)
         .attr("height", height)
 
+    var g = svg.append("g");
+
     // Set the projection
     const projection = d3.geoMercator()
-        .center([8.100001, 46.79])
+        .center([8.07, 46.82])
         .scale([11300])
         .translate([width / 2, height / 2]);
 
@@ -229,7 +233,7 @@
         var key_pop = "n_inhabitants" + '_' + year;
         console.log(key_pop);
 
-        var areas = svg.selectAll("path")
+        var areas = g.selectAll("path")
             .data(communeData)
             .enter()
             .append("path")
@@ -247,12 +251,14 @@
                 if ((n_inhabitants != null) && (count != null)) {
                     percentage = count / n_inhabitants * 100;
                 };
-                if (percentage) {
+                if (percentage == -1) {
                     //If value exists…
-                    return color(percentage);
+                    return "#969696";
                 } else if (percentage == 0) {
                     //If value is undefined…
                     return "#f1eef6";
+                }else if(percentage){
+                    return color(percentage);
                 }
             });
 
@@ -280,7 +286,7 @@
             console.log(key)
             var key_pop = "n_inhabitants" + '_' + year;
             console.log(key_pop);
-            d3.selectAll("path")
+            g.selectAll("path")
                 .attr("data-id", d => d.properties.name)
                 .attr("data-count", d => d.properties[key])
                 .attr("data-pop", d => d.properties[key_pop])
@@ -293,13 +299,15 @@
                     if ((n_inhabitants != null) && (count != null)) {
                         percentage = count / n_inhabitants * 100;
                     };
-                    if (percentage) {
-                        //If value exists…
-                        return color(percentage);
-                    } else if (percentage == 0) {
-                        //If value is undefined…
-                        return "#f1eef6";
-                    }
+                    if (percentage == -1) {
+                    //If value exists…
+                    return "#969696";
+                } else if (percentage == 0) {
+                    //If value is undefined…
+                    return "#f1eef6";
+                }else if(percentage){
+                    return color(percentage);
+                }
                 });
 
             d3.selectAll("#basemaps").on("change", function change() {
@@ -309,7 +317,7 @@
                 console.log(key)
                 var key_pop = "n_inhabitants" + '_' + year;
                 console.log(key_pop);
-                d3.selectAll("path")
+                g.selectAll("path")
                     .attr("data-id", d => d.properties.name)
                     .attr("data-count", d => d.properties[key])
                     .attr("data-pop", d => d.properties[key_pop])
@@ -322,13 +330,15 @@
                         if ((n_inhabitants != null) && (count != null)) {
                             percentage = count / n_inhabitants * 100;
                         };
-                        if (percentage) {
-                            //If value exists…
-                            return color(percentage);
-                        } else if (percentage == 0) {
-                            //If value is undefined…
-                            return "#f1eef6";
-                        }
+                        if (percentage == -1) {
+                    //If value exists…
+                    return "#969696";
+                } else if (percentage == 0) {
+                    //If value is undefined…
+                    return "#f1eef6";
+                }else if(percentage){
+                    return color(percentage);
+                }
                     });
             });
             areas.on("mouseover", function () {
@@ -350,6 +360,14 @@
         })
 
     }
+    var zoom = d3.zoom()
+      .scaleExtent([1, 8])
+      .on('zoom', function(event) {
+          g.selectAll('path')
+           .attr('transform', event.transform);
+});
+
+svg.call(zoom);
 
     setup();
 </script>
