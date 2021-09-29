@@ -11,10 +11,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
     <script src="https://raw.github.com/fryn/html5slider/master/html5slider.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
         #basemaps-wrapper {
             position: absolute;
-            top: 620px;
+            top: 630px;
             left: 780px;
             width: 170;
             background: white;
@@ -25,10 +31,6 @@
 
         svg {
             background-color: #f2f2f2;
-        }
-
-        #country {
-            width: 170px;
         }
 
         #tooltip {
@@ -51,18 +53,22 @@
             position: absolute;
             max-width: 220px;
             height: 185;
-            padding: 5px 8px 1px ;
+            padding: 5px 8px 1px;
             font: 12px Arial, Helvetica, sans-serif;
             background: rgba(255, 255, 255, 1);
-            box-shadow: 7px 7px 5px -5px #888;   
+            box-shadow: 7px 7px 5px -5px #888;
             border-radius: 5px;
             margin-top: 6px;
             margin-left: 5px;
-            
+
+        }
+
+        #legend-title {
+            font-family: 'Lato';
         }
 
         text {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         #slider-wrap {
@@ -72,11 +78,62 @@
         }
 
         #slider {
-            width: 700px;
+            width: 690px;
         }
 
-        span {
-            font-family: 'Lato', sans-serif;
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 680;
+            height: 15px;
+            background: #D3D3D3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background: steelblue;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: steelblue;
+            cursor: pointer;
+        }
+
+        .sliderticks {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+
+        .sliderticks p {
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 1px;
+            background: #D3D3D3;
+            height: 10px;
+            line-height: 40px;
+            margin: 0 0 20px 0;
+            margin-left: 20px;
         }
     </style>
 </head>
@@ -84,7 +141,7 @@
 </style>
 
 <body>
-    
+    <div id="load"></div>
 
     <div id="tooltip"></div>
 
@@ -113,21 +170,35 @@
     </div>
 
     <div id="slider-wrap">
-        <input id="slider" type="range" min="2010" max="2020" value="2020" step="1" /> <span id="range">2010</span>
-        <script type="text/javascript">
+        <input class="slider" type="range" min="2010" max="2020" value="2020" step="1" <span id="range"> </span>
+        <div class="sliderticks">
+            <p>2010</p>
+            <p>2011</p>
+            <p>2012</p>
+            <p>2013</p>
+            <p>2014</p>
+            <p>2015</p>
+            <p>2016</p>
+            <p>2017</p>
+            <p>2018</p>
+            <p>2019</p>
+            <p>2020</p>
+        </div>
+    </div>
+    <script type="text/javascript">
 
-            onload = function () {
-                var $ = function (id) { return document.getElementById(id); };
-                $('slider').oninput = function () { $('range').innerHTML = this.value; };
-                $('slider').oninput();
-            };
-        </script>
+        onload = function () {
+            var $ = function (id) { return document.getElementById(id); };
+            $('slider').oninput = function () { $('range').innerHTML = this.value; };
+            $('slider').oninput();
+        };
+    </script>
     </div>
 
     <div id="canvas">
         <svg id='legend'>
             <g>
-                <text x="0" y="10" fill="black" style="font-weight: bold;">Porcentaje de la población
+                <text x="0" y="10" fill="black" id="legend-title">Porcentaje de la población
                     hispanoablante</text>
             </g>
             <g>
@@ -156,7 +227,8 @@
             </g>
             <g>
                 <rect x="0" y="140" width="20" height="20" fill="#f1eef6"></rect>
-                <text x="30" y="155" fill="black"> < 0.001 </text>
+                <text x="30" y="155" fill="black">
+                    < 0.001 </text>
             </g>
             <g>
                 <rect x="0" y="160" width="20" height="20" fill="#969696"></rect>
@@ -171,7 +243,8 @@
 
 <script>
 
-// Set global
+
+    // Set global
     const width = 960;
     const height = 600;
     var country = 'Total',
@@ -229,11 +302,11 @@
 
     function drawMap(year, country) {
         var key = country + '_' + year;
-        console.log(key)
+        //console.log(key)
         var key_pop = "n_inhabitants" + '_' + year;
-        console.log(key_pop);
+        //console.log(key_pop);
 
-        var areas = g.selectAll("path")
+        var towns = g.selectAll("path")
             .data(communeData)
             .enter()
             .append("path")
@@ -257,12 +330,12 @@
                 } else if (percentage == 0) {
                     //If value is undefined…
                     return "#f1eef6";
-                }else if(percentage){
+                } else if (percentage) {
                     return color(percentage);
                 }
             });
 
-        areas.on("mouseover", function () {
+        towns.on("mouseover", function () {
             let name = d3.select(this).attr("data-id");
             let count = d3.select(this).attr("data-count")
             let n_inhabitants = d3.select(this).attr("data-pop")
@@ -271,21 +344,21 @@
                 .style("top", (event.pageY - 10) + "px")
                 .style("left", (event.pageX + 10) + "px")
                 .style('display', 'block')
-                .html(`<b>${name} </b> <br> Población hispana: ${count} <br> Total población: ${n_inhabitants}`)
+                .html(`<strong>${name} </strong> <br> Población hispana: ${count} <br> Total población: ${n_inhabitants}`)
         })
-            .on('mouseout', function(){ 
+            .on('mouseout', function () {
                 tooltip.style('display', 'none')
                 d3.select(this).style('stroke', 'gray').attr("stroke-width", ".3px");
             });
 
-        d3.selectAll("input ").on("change", function change() {
+        d3.selectAll("input").on("change", function change() {
             var year = this.value;
             country = document.getElementById("basemaps").value
-            console.log(year)
+            //console.log(year)
             var key = country + '_' + year;
-            console.log(key)
+            //console.log(key)
             var key_pop = "n_inhabitants" + '_' + year;
-            console.log(key_pop);
+            //console.log(key_pop);
             g.selectAll("path")
                 .attr("data-id", d => d.properties.name)
                 .attr("data-count", d => d.properties[key])
@@ -300,23 +373,40 @@
                         percentage = count / n_inhabitants * 100;
                     };
                     if (percentage == -1) {
-                    //If value exists…
-                    return "#969696";
-                } else if (percentage == 0) {
-                    //If value is undefined…
-                    return "#f1eef6";
-                }else if(percentage){
-                    return color(percentage);
-                }
+                        //If value exists…
+                        return "#969696";
+                    } else if (percentage == 0) {
+                        //If value is undefined…
+                        return "#f1eef6";
+                    } else if (percentage) {
+                        return color(percentage);
+                    }
                 });
+            towns.on("mouseover", function () {
+                let name = d3.select(this).attr("data-id");
+                let count = d3.select(this).attr("data-count")
+                let n_inhabitants = d3.select(this).attr("data-pop")
+                d3.select(this).style('stroke', 'black');
+                d3.select('#tooltip')
+                    .style("top", (event.pageY - 10) + "px")
+                    .style("left", (event.pageX + 10) + "px")
+                    .style('display', 'block')
+                    .html(`<strong>${name} </strong> <br> Población hispana: ${count} <br> Total población: ${n_inhabitants}`)
+            })
+                .on('mouseout', function () {
+                    tooltip.style('display', 'none')
+                    d3.select(this).style('stroke', 'gray').attr("stroke-width", ".3px")
+                });
+        })
 
-            d3.selectAll("#basemaps").on("change", function change() {
+        d3.selectAll("#basemaps").on("change", function change() {
                 var country = this.value;
-                console.log(country)
+                var year = document.getElementById("range").value
+                console.log(country, year)
                 var key = country + '_' + year;
-                console.log(key)
+                //console.log(key)
                 var key_pop = "n_inhabitants" + '_' + year;
-                console.log(key_pop);
+                //console.log(key_pop);
                 g.selectAll("path")
                     .attr("data-id", d => d.properties.name)
                     .attr("data-count", d => d.properties[key])
@@ -331,17 +421,17 @@
                             percentage = count / n_inhabitants * 100;
                         };
                         if (percentage == -1) {
-                    //If value exists…
-                    return "#969696";
-                } else if (percentage == 0) {
-                    //If value is undefined…
-                    return "#f1eef6";
-                }else if(percentage){
-                    return color(percentage);
-                }
+                            //If value exists…
+                            return "#969696";
+                        } else if (percentage == 0) {
+                            //If value is undefined…
+                            return "#f1eef6";
+                        } else if (percentage) {
+                            return color(percentage);
+                        }
                     });
             });
-            areas.on("mouseover", function () {
+            towns.on("mouseover", function () {
                 let name = d3.select(this).attr("data-id");
                 let count = d3.select(this).attr("data-count")
                 let n_inhabitants = d3.select(this).attr("data-pop")
@@ -350,24 +440,22 @@
                     .style("top", (event.pageY - 10) + "px")
                     .style("left", (event.pageX + 10) + "px")
                     .style('display', 'block')
-                    .html(`<b>${name} </b> <br> Población hispana: ${count} <br> Total población: ${n_inhabitants}`)
+                    .html(`<strong>${name} </strong> <br> Población hispana: ${count} <br> Total población: ${n_inhabitants}`)
             })
-            .on('mouseout', function(){ 
-                tooltip.style('display', 'none')
-                d3.select(this).style('stroke', 'gray').attr("stroke-width", ".3px")
-            });
-
-        })
+                .on('mouseout', function () {
+                    tooltip.style('display', 'none')
+                    d3.select(this).style('stroke', 'gray').attr("stroke-width", ".3px")
+                });
 
     }
     var zoom = d3.zoom()
-      .scaleExtent([1, 8])
-      .on('zoom', function(event) {
-          g.selectAll('path')
-           .attr('transform', event.transform);
-});
+        .scaleExtent([1, 8])
+        .on('zoom', function (event) {
+            g.selectAll('path')
+                .attr('transform', event.transform);
+        });
 
-svg.call(zoom);
+    svg.call(zoom);
 
     setup();
 </script>
