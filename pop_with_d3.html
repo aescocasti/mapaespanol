@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+        
     <style>
         #basemaps-wrapper {
             position: absolute;
@@ -274,8 +275,8 @@
 
 
     // URL data
-    url = "https://raw.githubusercontent.com/aescocasti/mapaespanol/main/data_comunas_2020.json"
-    //url_2 = "https://raw.githubusercontent.com/aescocasti/mapaespanol/main/data_nuevas_comunas_copie.json"
+    const url = fetch("https://raw.githubusercontent.com/aescocasti/mapaespanol/main/datos_comunas_antes_2020.json");
+    const url_2 = fetch("https://raw.githubusercontent.com/aescocasti/mapaespanol/main/data_nuevas_comunas_copie.json");
 
 
     function setup() {
@@ -284,42 +285,48 @@
 
 
     function loadData() {
-        d3.json(url, function (data) {
-            return data
-        }).then(onDataLoaded);
+        Promise.all([url, url_2])
+        .then(values =>{
+            return Promise.all(values.map(r => r.json()));
+        }).then(values =>{
+            //console.log(values);
+            onDataLoaded(values)
+        })
     }
-    // function loadData2020() {
-    //     d3.json(url_2, function (data) {
-    //         return data
-    //     }).then(onDataLoaded);
-    // }
-
-    function onDataLoaded(data) {
-        communeData = data.features;
-        //console.log(communeData)
+    
+    function onDataLoaded(values) {
+        communeData = values[0].features;
+        communeData_2020 = values[1].features;
+        console.log(communeData)
+        console.log(communeData_2020)
         drawMap(currYear, country);
     }
 
     function drawMap(year, country) {
+        //console.log(communeData_2020)
+        //console.log(communeData)
         var key = country + '_' + year;
         //console.log(key)
         var key_pop = "n_inhabitants" + '_' + year;
         //console.log(key_pop);
 
         var towns = g.selectAll("path")
-            .data(communeData)
-            .enter()
-            .append("path")
+            .data(function(d){
+                if(year == 2020){
+                    return communeData_2020
+                }else return communeData
+            })
+            .join("path")
+            .attr("stroke", "gray")
+            .attr("stroke-width", ".3px")
+            .attr("d", path.projection(projection))
             .attr("data-id", d => d.properties.name)
             .attr("data-count", d => d.properties[key])
             .attr("data-pop", d => d.properties[key_pop])
-            .attr("stroke", "gray")
-            .attr("stroke-width", ".3px")
-            .attr("d", path)
-            .style("fill", function (communeData) {
-                var count = communeData.properties[key];
+            .style("fill", function (data) {
+                var count = data.properties[key];
                 //console.log(count)
-                var n_inhabitants = communeData.properties[key_pop];
+                var n_inhabitants = data.properties[key_pop];
                 var percentage = -1;
                 if ((n_inhabitants != null) && (count != null)) {
                     percentage = count / n_inhabitants * 100;
@@ -351,7 +358,7 @@
                 d3.select(this).style('stroke', 'gray').attr("stroke-width", ".3px");
             });
 
-        d3.selectAll("input").on("change", function change() {
+            var towns = d3.selectAll("input").on("change", function change() {
             var year = this.value;
             country = document.getElementById("basemaps").value
             //console.log(year)
@@ -359,15 +366,24 @@
             //console.log(key)
             var key_pop = "n_inhabitants" + '_' + year;
             //console.log(key_pop);
-            g.selectAll("path")
+            var towns = g.selectAll("path")
+            .data(function(d){
+                if(year ==2020){
+                    return communeData_2020
+                }else return communeData
+            })
+            .join("path")
+            .attr("stroke", "gray")
+            .attr("stroke-width", ".3px")
+            .attr("d", path.projection(projection))
                 .attr("data-id", d => d.properties.name)
                 .attr("data-count", d => d.properties[key])
                 .attr("data-pop", d => d.properties[key_pop])
-                .style("fill", function (communeData) {
+                .style("fill", function (data) {
 
-                    var count = communeData.properties[key];
+                    var count = data.properties[key];
                     //console.log(count)
-                    var n_inhabitants = communeData.properties[key_pop];
+                    var n_inhabitants = data.properties[key_pop];
                     var percentage = -1;
                     if ((n_inhabitants != null) && (count != null)) {
                         percentage = count / n_inhabitants * 100;
@@ -399,7 +415,7 @@
                 });
         })
 
-        d3.selectAll("#basemaps").on("change", function change() {
+        var towns= d3.selectAll("#basemaps").on("change", function change() {
                 var country = this.value;
                 var year = document.getElementById("range").value
                 console.log(country, year)
@@ -407,15 +423,24 @@
                 //console.log(key)
                 var key_pop = "n_inhabitants" + '_' + year;
                 //console.log(key_pop);
-                g.selectAll("path")
+                var towns= g.selectAll("path")
+            .data(function(d){
+                if(year ==2020){
+                    return communeData_2020
+                }else return communeData
+            })
+            .join("path")
+            .attr("stroke", "gray")
+            .attr("stroke-width", ".3px")
+                .attr("d", path.projection(projection))
                     .attr("data-id", d => d.properties.name)
                     .attr("data-count", d => d.properties[key])
                     .attr("data-pop", d => d.properties[key_pop])
-                    .style("fill", function (communeData) {
+                    .style("fill", function (data) {
 
-                        var count = communeData.properties[key];
+                        var count = data.properties[key];
                         //console.log(count)
-                        var n_inhabitants = communeData.properties[key_pop];
+                        var n_inhabitants = data.properties[key_pop];
                         var percentage = -1;
                         if ((n_inhabitants != null) && (count != null)) {
                             percentage = count / n_inhabitants * 100;
