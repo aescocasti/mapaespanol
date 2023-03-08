@@ -1,205 +1,205 @@
-"name","year","number"
-"Argentina","2010","1772.0"
-"Argentina","2011","1840.0"
-"Argentina","2012","1813.0"
-"Argentina","2013","1802.0"
-"Argentina","2014","1779.0"
-"Argentina","2015","1769.0"
-"Argentina","2016","1662.0"
-"Argentina","2017","1699.0"
-"Argentina","2018","1649.0"
-"Argentina","2019","1720.0"
-"Argentina","2020","1803.0"
-"Argentina","2021","1891.0"
-"Bolivia","2010","1517.0"
-"Bolivia","2011","1594.0"
-"Bolivia","2012","1673.0"
-"Bolivia","2013","1779.0"
-"Bolivia","2014","1838.0"
-"Bolivia","2015","1933.0"
-"Bolivia","2016","2111.0"
-"Bolivia","2017","2016.0"
-"Bolivia","2018","2219.0"
-"Bolivia","2019","2311.0"
-"Bolivia","2020","2436.0"
-"Bolivia","2021","2567.0"
-"Chile","2010","3694.0"
-"Chile","2011","3676.0"
-"Chile","2012","3493.0"
-"Chile","2013","3485.0"
-"Chile","2014","3455.0"
-"Chile","2015","3401.0"
-"Chile","2016","3364.0"
-"Chile","2017","3386.0"
-"Chile","2018","3372.0"
-"Chile","2019","3342.0"
-"Chile","2020","3362.0"
-"Chile","2021","3388.0"
-"Costa Rica","2010","338.0"
-"Costa Rica","2011","363.0"
-"Costa Rica","2012","378.0"
-"Costa Rica","2013","385.0"
-"Costa Rica","2014","368.0"
-"Costa Rica","2015","392.0"
-"Costa Rica","2016","440.0"
-"Costa Rica","2017","421.0"
-"Costa Rica","2018","468.0"
-"Costa Rica","2019","479.0"
-"Costa Rica","2020","475.0"
-"Costa Rica","2021","514.0"
-"Republica Dominicana","2010","5602.0"
-"Republica Dominicana","2011","5626.0"
-"Republica Dominicana","2012","5744.0"
-"Republica Dominicana","2013","5828.0"
-"Republica Dominicana","2014","5863.0"
-"Republica Dominicana","2015","5909.0"
-"Republica Dominicana","2016","5863.0"
-"Republica Dominicana","2017","5913.0"
-"Republica Dominicana","2018","5808.0"
-"Republica Dominicana","2019","5824.0"
-"Republica Dominicana","2020","5820.0"
-"Republica Dominicana","2021","5762.0"
-"Ecuador","2010","2291.0"
-"Ecuador","2011","2440.0"
-"Ecuador","2012","2586.0"
-"Ecuador","2013","2719.0"
-"Ecuador","2014","2760.0"
-"Ecuador","2015","2731.0"
-"Ecuador","2016","2710.0"
-"Ecuador","2017","2732.0"
-"Ecuador","2018","2709.0"
-"Ecuador","2019","2689.0"
-"Ecuador","2020","2746.0"
-"Ecuador","2021","2798.0"
-"El Salvador","2010","209.0"
-"El Salvador","2011","231.0"
-"El Salvador","2012","233.0"
-"El Salvador","2013","228.0"
-"El Salvador","2014","241.0"
-"El Salvador","2015","239.0"
-"El Salvador","2016","255.0"
-"El Salvador","2017","238.0"
-"El Salvador","2018","258.0"
-"El Salvador","2019","279.0"
-"El Salvador","2020","292.0"
-"El Salvador","2021","308.0"
-"Guatemala","2010","241.0"
-"Guatemala","2011","252.0"
-"Guatemala","2012","264.0"
-"Guatemala","2013","272.0"
-"Guatemala","2014","254.0"
-"Guatemala","2015","266.0"
-"Guatemala","2016","293.0"
-"Guatemala","2017","286.0"
-"Guatemala","2018","294.0"
-"Guatemala","2019","287.0"
-"Guatemala","2020","295.0"
-"Guatemala","2021","293.0"
-"Honduras","2010","214.0"
-"Honduras","2011","203.0"
-"Honduras","2012","215.0"
-"Honduras","2013","246.0"
-"Honduras","2014","251.0"
-"Honduras","2015","249.0"
-"Honduras","2016","279.0"
-"Honduras","2017","250.0"
-"Honduras","2018","305.0"
-"Honduras","2019","325.0"
-"Honduras","2020","376.0"
-"Honduras","2021","427.0"
-"Colombia","2010","4189.0"
-"Colombia","2011","4295.0"
-"Colombia","2012","4382.0"
-"Colombia","2013","4422.0"
-"Colombia","2014","4517.0"
-"Colombia","2015","4472.0"
-"Colombia","2016","4648.0"
-"Colombia","2017","4544.0"
-"Colombia","2018","4709.0"
-"Colombia","2019","4926.0"
-"Colombia","2020","5157.0"
-"Colombia","2021","5477.0"
-"Cuba","2010","1728.0"
-"Cuba","2011","1739.0"
-"Cuba","2012","1722.0"
-"Cuba","2013","1756.0"
-"Cuba","2014","1745.0"
-"Cuba","2015","1732.0"
-"Cuba","2016","1682.0"
-"Cuba","2017","1715.0"
-"Cuba","2018","1662.0"
-"Cuba","2019","1671.0"
-"Cuba","2020","1697.0"
-"Cuba","2021","1759.0"
-"México","2010","2602.0"
-"México","2011","2769.0"
-"México","2012","2843.0"
-"México","2013","2863.0"
-"México","2014","2967.0"
-"México","2015","3000.0"
-"México","2016","3166.0"
-"México","2017","3030.0"
-"México","2018","3186.0"
-"México","2019","3294.0"
-"México","2020","3499.0"
-"México","2021","3686.0"
-"Nicaragua","2010","211.0"
-"Nicaragua","2011","210.0"
-"Nicaragua","2012","236.0"
-"Nicaragua","2013","240.0"
-"Nicaragua","2014","248.0"
-"Nicaragua","2015","267.0"
-"Nicaragua","2016","298.0"
-"Nicaragua","2017","282.0"
-"Nicaragua","2018","344.0"
-"Nicaragua","2019","407.0"
-"Nicaragua","2020","446.0"
-"Nicaragua","2021","472.0"
-"Panama","2010","200.0"
-"Panama","2011","156.0"
-"Panama","2012","165.0"
-"Panama","2013","161.0"
-"Panama","2014","160.0"
-"Panama","2015","164.0"
-"Panama","2016","211.0"
-"Panama","2017","172.0"
-"Panama","2018","212.0"
-"Panama","2019","218.0"
-"Panama","2020","200.0"
-"Panama","2021","200.0"
-"Peru","2010","3066.0"
-"Peru","2011","3058.0"
-"Peru","2012","3018.0"
-"Peru","2013","3036.0"
-"Peru","2014","2990.0"
-"Peru","2015","2898.0"
-"Peru","2016","2810.0"
-"Peru","2017","2825.0"
-"Peru","2018","2812.0"
-"Peru","2019","2849.0"
-"Peru","2020","2864.0"
-"Peru","2021","2972.0"
-"Uruguay","2010","446.0"
-"Uruguay","2011","444.0"
-"Uruguay","2012","420.0"
-"Uruguay","2013","390.0"
-"Uruguay","2014","388.0"
-"Uruguay","2015","370.0"
-"Uruguay","2016","334.0"
-"Uruguay","2017","346.0"
-"Uruguay","2018","325.0"
-"Uruguay","2019","326.0"
-"Uruguay","2020","326.0"
-"Uruguay","2021","332.0"
-"Venezuela","2010","1168.0"
-"Venezuela","2011","1160.0"
-"Venezuela","2012","1153.0"
-"Venezuela","2013","1186.0"
-"Venezuela","2014","1250.0"
-"Venezuela","2015","1238.0"
-"Venezuela","2016","1262.0"
-"Venezuela","2017","1249.0"
-"Venezuela","2018","1310.0"
-"Venezuela","2019","1358.0"
-"Venezuela","2020","1381.0"
-"Venezuela","2021","1450.0"
+name,year,number
+Argentina,2010,1772.0
+Argentina,2011,1840.0
+Argentina,2012,1813.0
+Argentina,2013,1802.0
+Argentina,2014,1779.0
+Argentina,2015,1769.0
+Argentina,2016,1662.0
+Argentina,2017,1699.0
+Argentina,2018,1649.0
+Argentina,2019,1720.0
+Argentina,2020,1803.0
+Argentina,2021,1891.0
+Bolivia,2010,1517.0
+Bolivia,2011,1594.0
+Bolivia,2012,1673.0
+Bolivia,2013,1779.0
+Bolivia,2014,1838.0
+Bolivia,2015,1933.0
+Bolivia,2016,2111.0
+Bolivia,2017,2016.0
+Bolivia,2018,2219.0
+Bolivia,2019,2311.0
+Bolivia,2020,2436.0
+Bolivia,2021,2567.0
+Chile,2010,3694.0
+Chile,2011,3676.0
+Chile,2012,3493.0
+Chile,2013,3485.0
+Chile,2014,3455.0
+Chile,2015,3401.0
+Chile,2016,3364.0
+Chile,2017,3386.0
+Chile,2018,3372.0
+Chile,2019,3342.0
+Chile,2020,3362.0
+Chile,2021,3388.0
+Costa Rica,2010,338.0
+Costa Rica,2011,363.0
+Costa Rica,2012,378.0
+Costa Rica,2013,385.0
+Costa Rica,2014,368.0
+Costa Rica,2015,392.0
+Costa Rica,2016,440.0
+Costa Rica,2017,421.0
+Costa Rica,2018,468.0
+Costa Rica,2019,479.0
+Costa Rica,2020,475.0
+Costa Rica,2021,514.0
+Republica Dominicana,2010,5602.0
+Republica Dominicana,2011,5626.0
+Republica Dominicana,2012,5744.0
+Republica Dominicana,2013,5828.0
+Republica Dominicana,2014,5863.0
+Republica Dominicana,2015,5909.0
+Republica Dominicana,2016,5863.0
+Republica Dominicana,2017,5913.0
+Republica Dominicana,2018,5808.0
+Republica Dominicana,2019,5824.0
+Republica Dominicana,2020,5820.0
+Republica Dominicana,2021,5762.0
+Ecuador,2010,2291.0
+Ecuador,2011,2440.0
+Ecuador,2012,2586.0
+Ecuador,2013,2719.0
+Ecuador,2014,2760.0
+Ecuador,2015,2731.0
+Ecuador,2016,2710.0
+Ecuador,2017,2732.0
+Ecuador,2018,2709.0
+Ecuador,2019,2689.0
+Ecuador,2020,2746.0
+Ecuador,2021,2798.0
+El Salvador,2010,209.0
+El Salvador,2011,231.0
+El Salvador,2012,233.0
+El Salvador,2013,228.0
+El Salvador,2014,241.0
+El Salvador,2015,239.0
+El Salvador,2016,255.0
+El Salvador,2017,238.0
+El Salvador,2018,258.0
+El Salvador,2019,279.0
+El Salvador,2020,292.0
+El Salvador,2021,308.0
+Guatemala,2010,241.0
+Guatemala,2011,252.0
+Guatemala,2012,264.0
+Guatemala,2013,272.0
+Guatemala,2014,254.0
+Guatemala,2015,266.0
+Guatemala,2016,293.0
+Guatemala,2017,286.0
+Guatemala,2018,294.0
+Guatemala,2019,287.0
+Guatemala,2020,295.0
+Guatemala,2021,293.0
+Honduras,2010,214.0
+Honduras,2011,203.0
+Honduras,2012,215.0
+Honduras,2013,246.0
+Honduras,2014,251.0
+Honduras,2015,249.0
+Honduras,2016,279.0
+Honduras,2017,250.0
+Honduras,2018,305.0
+Honduras,2019,325.0
+Honduras,2020,376.0
+Honduras,2021,427.0
+Colombia,2010,4189.0
+Colombia,2011,4295.0
+Colombia,2012,4382.0
+Colombia,2013,4422.0
+Colombia,2014,4517.0
+Colombia,2015,4472.0
+Colombia,2016,4648.0
+Colombia,2017,4544.0
+Colombia,2018,4709.0
+Colombia,2019,4926.0
+Colombia,2020,5157.0
+Colombia,2021,5477.0
+Cuba,2010,1728.0
+Cuba,2011,1739.0
+Cuba,2012,1722.0
+Cuba,2013,1756.0
+Cuba,2014,1745.0
+Cuba,2015,1732.0
+Cuba,2016,1682.0
+Cuba,2017,1715.0
+Cuba,2018,1662.0
+Cuba,2019,1671.0
+Cuba,2020,1697.0
+Cuba,2021,1759.0
+México,2010,2602.0
+México,2011,2769.0
+México,2012,2843.0
+México,2013,2863.0
+México,2014,2967.0
+México,2015,3000.0
+México,2016,3166.0
+México,2017,3030.0
+México,2018,3186.0
+México,2019,3294.0
+México,2020,3499.0
+México,2021,3686.0
+Nicaragua,2010,211.0
+Nicaragua,2011,210.0
+Nicaragua,2012,236.0
+Nicaragua,2013,240.0
+Nicaragua,2014,248.0
+Nicaragua,2015,267.0
+Nicaragua,2016,298.0
+Nicaragua,2017,282.0
+Nicaragua,2018,344.0
+Nicaragua,2019,407.0
+Nicaragua,2020,446.0
+Nicaragua,2021,472.0
+Panama,2010,200.0
+Panama,2011,156.0
+Panama,2012,165.0
+Panama,2013,161.0
+Panama,2014,160.0
+Panama,2015,164.0
+Panama,2016,211.0
+Panama,2017,172.0
+Panama,2018,212.0
+Panama,2019,218.0
+Panama,2020,200.0
+Panama,2021,200.0
+Peru,2010,3066.0
+Peru,2011,3058.0
+Peru,2012,3018.0
+Peru,2013,3036.0
+Peru,2014,2990.0
+Peru,2015,2898.0
+Peru,2016,2810.0
+Peru,2017,2825.0
+Peru,2018,2812.0
+Peru,2019,2849.0
+Peru,2020,2864.0
+Peru,2021,2972.0
+Uruguay,2010,446.0
+Uruguay,2011,444.0
+Uruguay,2012,420.0
+Uruguay,2013,390.0
+Uruguay,2014,388.0
+Uruguay,2015,370.0
+Uruguay,2016,334.0
+Uruguay,2017,346.0
+Uruguay,2018,325.0
+Uruguay,2019,326.0
+Uruguay,2020,326.0
+Uruguay,2021,332.0
+Venezuela,2010,1168.0
+Venezuela,2011,1160.0
+Venezuela,2012,1153.0
+Venezuela,2013,1186.0
+Venezuela,2014,1250.0
+Venezuela,2015,1238.0
+Venezuela,2016,1262.0
+Venezuela,2017,1249.0
+Venezuela,2018,1310.0
+Venezuela,2019,1358.0
+Venezuela,2020,1381.0
+Venezuela,2021,1450.0
