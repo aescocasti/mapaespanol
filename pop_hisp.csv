@@ -35,30 +35,30 @@ Chile,2018,3372.0
 Chile,2019,3342.0
 Chile,2020,3362.0
 Chile,2021,3388.0
-Costa Rica,2010,338.0
-Costa Rica,2011,363.0
-Costa Rica,2012,378.0
-Costa Rica,2013,385.0
-Costa Rica,2014,368.0
-Costa Rica,2015,392.0
-Costa Rica,2016,440.0
-Costa Rica,2017,421.0
-Costa Rica,2018,468.0
-Costa Rica,2019,479.0
-Costa Rica,2020,475.0
-Costa Rica,2021,514.0
-Republica Dominicana,2010,5602.0
-Republica Dominicana,2011,5626.0
-Republica Dominicana,2012,5744.0
-Republica Dominicana,2013,5828.0
-Republica Dominicana,2014,5863.0
-Republica Dominicana,2015,5909.0
-Republica Dominicana,2016,5863.0
-Republica Dominicana,2017,5913.0
-Republica Dominicana,2018,5808.0
-Republica Dominicana,2019,5824.0
-Republica Dominicana,2020,5820.0
-Republica Dominicana,2021,5762.0
+Costa_Rica,2010,338.0
+Costa_Rica,2011,363.0
+Costa_Rica,2012,378.0
+Costa_Rica,2013,385.0
+Costa_Rica,2014,368.0
+Costa_Rica,2015,392.0
+Costa_Rica,2016,440.0
+Costa_Rica,2017,421.0
+Costa_Rica,2018,468.0
+Costa_Rica,2019,479.0
+Costa_Rica,2020,475.0
+Costa_Rica,2021,514.0
+Republica_Dominicana,2010,5602.0
+Republica_Dominicana,2011,5626.0
+Republica_Dominicana,2012,5744.0
+Republica_Dominicana,2013,5828.0
+Republica_Dominicana,2014,5863.0
+Republica_Dominicana,2015,5909.0
+Republica_Dominicana,2016,5863.0
+Republica_Dominicana,2017,5913.0
+Republica_Dominicana,2018,5808.0
+Republica_Dominicana,2019,5824.0
+Republica_Dominicana,2020,5820.0
+Republica_Dominicana,2021,5762.0
 Ecuador,2010,2291.0
 Ecuador,2011,2440.0
 Ecuador,2012,2586.0
@@ -71,18 +71,18 @@ Ecuador,2018,2709.0
 Ecuador,2019,2689.0
 Ecuador,2020,2746.0
 Ecuador,2021,2798.0
-El Salvador,2010,209.0
-El Salvador,2011,231.0
-El Salvador,2012,233.0
-El Salvador,2013,228.0
-El Salvador,2014,241.0
-El Salvador,2015,239.0
-El Salvador,2016,255.0
-El Salvador,2017,238.0
-El Salvador,2018,258.0
-El Salvador,2019,279.0
-El Salvador,2020,292.0
-El Salvador,2021,308.0
+El_Salvador,2010,209.0
+El_Salvador,2011,231.0
+El_Salvador,2012,233.0
+El_Salvador,2013,228.0
+El_Salvador,2014,241.0
+El_Salvador,2015,239.0
+El_Salvador,2016,255.0
+El_Salvador,2017,238.0
+El_Salvador,2018,258.0
+El_Salvador,2019,279.0
+El_Salvador,2020,292.0
+El_Salvador,2021,308.0
 Guatemala,2010,241.0
 Guatemala,2011,252.0
 Guatemala,2012,264.0
