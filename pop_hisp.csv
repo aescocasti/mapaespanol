@@ -11,6 +11,7 @@ Argentina,2018,1649.0
 Argentina,2019,1720.0
 Argentina,2020,1803.0
 Argentina,2021,1891.0
+Argentina,2022,1953.0
 Bolivia,2010,1517.0
 Bolivia,2011,1594.0
 Bolivia,2012,1673.0
@@ -23,6 +24,7 @@ Bolivia,2018,2219.0
 Bolivia,2019,2311.0
 Bolivia,2020,2436.0
 Bolivia,2021,2567.0
+Bolivia,2022,2637.0
 Chile,2010,3694.0
 Chile,2011,3676.0
 Chile,2012,3493.0
@@ -35,6 +37,7 @@ Chile,2018,3372.0
 Chile,2019,3342.0
 Chile,2020,3362.0
 Chile,2021,3388.0
+Chile,2022,3482.0
 Costa_Rica,2010,338.0
 Costa_Rica,2011,363.0
 Costa_Rica,2012,378.0
@@ -47,6 +50,7 @@ Costa_Rica,2018,468.0
 Costa_Rica,2019,479.0
 Costa_Rica,2020,475.0
 Costa_Rica,2021,514.0
+Costa_Rica,2022,519.0
 Republica_Dominicana,2010,5602.0
 Republica_Dominicana,2011,5626.0
 Republica_Dominicana,2012,5744.0
@@ -59,6 +63,7 @@ Republica_Dominicana,2018,5808.0
 Republica_Dominicana,2019,5824.0
 Republica_Dominicana,2020,5820.0
 Republica_Dominicana,2021,5762.0
+Republica_Dominicana,2022,5755.0
 Ecuador,2010,2291.0
 Ecuador,2011,2440.0
 Ecuador,2012,2586.0
@@ -71,6 +76,7 @@ Ecuador,2018,2709.0
 Ecuador,2019,2689.0
 Ecuador,2020,2746.0
 Ecuador,2021,2798.0
+Ecuador,2022,2837.0
 El_Salvador,2010,209.0
 El_Salvador,2011,231.0
 El_Salvador,2012,233.0
@@ -83,6 +89,7 @@ El_Salvador,2018,258.0
 El_Salvador,2019,279.0
 El_Salvador,2020,292.0
 El_Salvador,2021,308.0
+El_Salvador,2022,337.0
 Guatemala,2010,241.0
 Guatemala,2011,252.0
 Guatemala,2012,264.0
@@ -95,6 +102,7 @@ Guatemala,2018,294.0
 Guatemala,2019,287.0
 Guatemala,2020,295.0
 Guatemala,2021,293.0
+Guatemala,2022,296.0
 Honduras,2010,214.0
 Honduras,2011,203.0
 Honduras,2012,215.0
@@ -107,6 +115,7 @@ Honduras,2018,305.0
 Honduras,2019,325.0
 Honduras,2020,376.0
 Honduras,2021,427.0
+Honduras,2022,477.0
 Colombia,2010,4189.0
 Colombia,2011,4295.0
 Colombia,2012,4382.0
@@ -119,6 +128,7 @@ Colombia,2018,4709.0
 Colombia,2019,4926.0
 Colombia,2020,5157.0
 Colombia,2021,5477.0
+Colombia,2022,5820.0
 Cuba,2010,1728.0
 Cuba,2011,1739.0
 Cuba,2012,1722.0
@@ -131,6 +141,7 @@ Cuba,2018,1662.0
 Cuba,2019,1671.0
 Cuba,2020,1697.0
 Cuba,2021,1759.0
+Cuba,2021,1783.0
 México,2010,2602.0
 México,2011,2769.0
 México,2012,2843.0
@@ -143,6 +154,7 @@ México,2018,3186.0
 México,2019,3294.0
 México,2020,3499.0
 México,2021,3686.0
+México,2022,3787.0
 Nicaragua,2010,211.0
 Nicaragua,2011,210.0
 Nicaragua,2012,236.0
@@ -155,6 +167,7 @@ Nicaragua,2018,344.0
 Nicaragua,2019,407.0
 Nicaragua,2020,446.0
 Nicaragua,2021,472.0
+Nicaragua,2022,497.0
 Panama,2010,200.0
 Panama,2011,156.0
 Panama,2012,165.0
@@ -167,6 +180,7 @@ Panama,2018,212.0
 Panama,2019,218.0
 Panama,2020,200.0
 Panama,2021,200.0
+Panama,2022,221.0
 Peru,2010,3066.0
 Peru,2011,3058.0
 Peru,2012,3018.0
@@ -179,6 +193,20 @@ Peru,2018,2812.0
 Peru,2019,2849.0
 Peru,2020,2864.0
 Peru,2021,2972.0
+Peru,2022,3085.0
+Paraguay,2010,339.0
+Paraguay,2011,336.0
+Paraguay,2012,387.0
+Paraguay,2013,406.0
+Paraguay,2014,433.0
+Paraguay,2015,442.0
+Paraguay,2016,474.0
+Paraguay,2017,455.0
+Paraguay,2018,514.0
+Paraguay,2019,531.0
+Paraguay,2020,551.0
+Paraguay,2021,583.0
+Paraguay,2022,619.0
 Uruguay,2010,446.0
 Uruguay,2011,444.0
 Uruguay,2012,420.0
@@ -191,6 +219,7 @@ Uruguay,2018,325.0
 Uruguay,2019,326.0
 Uruguay,2020,326.0
 Uruguay,2021,332.0
+Uruguay,2022,336.0
 Venezuela,2010,1168.0
 Venezuela,2011,1160.0
 Venezuela,2012,1153.0
@@ -203,3 +232,4 @@ Venezuela,2018,1310.0
 Venezuela,2019,1358.0
 Venezuela,2020,1381.0
 Venezuela,2021,1450.0
+Venezuela,2022,1526.0
